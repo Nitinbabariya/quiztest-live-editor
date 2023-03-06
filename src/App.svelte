@@ -1,6 +1,6 @@
 <script lang="ts">
   import Editor from './Editor.svelte';
-  import Quizdown from './Quizdown.svelte';
+  import Quiztest from './Quiztest.svelte';
   import { default_code, add_to_code } from './default_quiz.js';
   import { onMount } from 'svelte';
   import Loading from './Loading.svelte';
@@ -37,7 +37,7 @@
 </script>
 
 <nav bind:clientHeight="{navHeight}">
-  <h1 class="brand">Quizdown Editor</h1>
+  <h1 class="brand">Quiztest Editor</h1>
 
   <!-- responsive-->
   <input id="bmenub" type="checkbox" class="show" />
@@ -51,10 +51,10 @@
       on:click="{() => (seeAbout = !seeAbout)}"
       href="#about"><Icon name="help-circle" /> About</a>
     <a
-      title="Visit the quizdown-js project"
+      title="Visit the quiztest-js project"
       class="button pseudo"
       target="_blank"
-      href="https://github.com/bonartm/quizdown-js"
+      href="https://github.com/nitinbabariya/quiztest-js"
       ><Icon name="github" /> GitHub</a>
   </div>
 </nav>
@@ -67,15 +67,15 @@
   <Panel isOpen="{seeAbout}" top="{navHeight}">
     <h2>About</h2>
     <p>
-      <a href="https://github.com/bonartm/quizdown-js">quizdown-js</a>
+      <a href="https://github.com/nitinbabairya/quiztest-js">quiztest-js</a>
       is a javascript library that takes markdown formatted text and converts it
-      into a modular quiz application inside any website. quizdown is best used in
+      into a modular quiz application inside any website. quiztest is best used in
       combination with existing static site generators like hugo or sphinx. Check
       out
-      <a href="https://github.com/bonartm/hugo-quiz">hugo-quiz</a>
+      <a href="https://github.com/nitinbabairya/hugo-quiz">hugo-quiz</a>
       and
-      <a href="https://github.com/bonartm/sphinxcontrib-quizdown"
-        >sphinxcontrib-quizdown</a
+      <a href="https://github.com/nitinbabariya/sphinxcontrib-quiztest"
+        >sphinxcontrib-quiztest</a
       >.
     </p>
     <p>
@@ -120,7 +120,7 @@
         <Editor bind:editorReady bind:code />
       </div>
       <div>
-        <Quizdown bind:code editorReady="{editorReady}" />
+        <Quiztest bind:code editorReady="{editorReady}" />
       </div>
     </div>
   </div>

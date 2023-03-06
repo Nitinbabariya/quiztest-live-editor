@@ -68,7 +68,7 @@ print(x[2])
       body = `
 # Put the [days](https://en.wikipedia.org/wiki/Day) in order!
 
-Quizdown also renders formulas:
+Quiztest also renders formulas:
 
 $$
 x = \\frac{a+b^2}{\\sqrt{b+c}}
